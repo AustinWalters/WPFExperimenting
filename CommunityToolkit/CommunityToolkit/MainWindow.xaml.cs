@@ -5,8 +5,10 @@
 /// </summary>
 public partial class MainWindow
 {
+    private MainWindowViewModel viewModel;
     public MainWindow()
     {
+        DataContext = viewModel = new MainWindowViewModel();
         InitializeComponent();
     }
 }

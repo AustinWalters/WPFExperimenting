@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityToolkit", "CommunityToolkit\CommunityToolkit.csproj", "{62E0B9B5-8414-4590-895A-898E33931DAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62E0B9B5-8414-4590-895A-898E33931DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E0B9B5-8414-4590-895A-898E33931DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E0B9B5-8414-4590-895A-898E33931DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E0B9B5-8414-4590-895A-898E33931DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD3B3DE4-4C2C-49CF-8A6E-B3582FB9C1DF}
+	EndGlobalSection
+EndGlobal

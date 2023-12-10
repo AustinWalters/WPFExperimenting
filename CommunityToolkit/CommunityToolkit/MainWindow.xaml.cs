@@ -11,4 +11,9 @@ public partial class MainWindow
         DataContext = viewModel = new MainWindowViewModel();
         InitializeComponent();
     }
+
+    private void BadgePWB_PasswordChanged(object sender, System.Windows.RoutedEventArgs e)
+    {
+        viewModel.Badge = BadgePWB.Password;
+    }
 }

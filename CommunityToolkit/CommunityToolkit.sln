@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityToolkit", "CommunityToolkit\CommunityToolkit.csproj", "{62E0B9B5-8414-4590-895A-898E33931DAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunityToolkit", "CommunityToolkit\CommunityToolkit.csproj", "{62E0B9B5-8414-4590-895A-898E33931DAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunityToolkitTests", "CommunityToolkitTests\CommunityToolkitTests.csproj", "{3D9B3986-8B29-4C49-BAE1-0C212B75A6C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "..\ClassLibrary\ClassLibrary\ClassLibrary.csproj", "{060EAB4E-FE0F-4F33-8307-D29E511EFDED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{62E0B9B5-8414-4590-895A-898E33931DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E0B9B5-8414-4590-895A-898E33931DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E0B9B5-8414-4590-895A-898E33931DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9B3986-8B29-4C49-BAE1-0C212B75A6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9B3986-8B29-4C49-BAE1-0C212B75A6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9B3986-8B29-4C49-BAE1-0C212B75A6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9B3986-8B29-4C49-BAE1-0C212B75A6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{060EAB4E-FE0F-4F33-8307-D29E511EFDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060EAB4E-FE0F-4F33-8307-D29E511EFDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060EAB4E-FE0F-4F33-8307-D29E511EFDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060EAB4E-FE0F-4F33-8307-D29E511EFDED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

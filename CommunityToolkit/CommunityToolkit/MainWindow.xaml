@@ -4,19 +4,76 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommunityToolkit"
+        xmlns:custom="clr-namespace:ClassLibrary;assembly=ClassLibrary"
         mc:Ignorable="d"
         FontSize="24"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="{Binding FirstName}"/>
-        <Button Grid.Row="1" Content="Click Me" Command="{Binding ClickCommand}"/>
-        <Button Grid.Row="2" Content="Cancel" Command="{Binding ClickCancelCommand}"/>
-
-    </Grid>
+    <Border Width="Auto"
+            Height="Auto"
+            Background="White"
+            CornerRadius="6">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="15"
+                              Direction ="-90" 
+                              RenderingBias ="Quality" 
+                              ShadowDepth ="2" 
+                              Color ="Gray" />
+        </Border.Effect>
+        <StackPanel Orientation="Vertical"
+                    Margin="20">
+            <TextBlock Text="Login" 
+                       FontSize="25"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       FontWeight="Bold"
+                       Padding="10"
+                       />
+            <Grid VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Please Enter Username" 
+                   Grid.Row="0"
+                   Margin="0,15"
+                   HorizontalAlignment="Center"/>
+                <PasswordBox x:Name="BadgePWB" Grid.Row="1"
+                      Password=""
+                      Padding="0,5"                           
+                      Width="255"
+                      BorderThickness="0,0,0,1"
+                      HorizontalAlignment="Center"
+                      HorizontalContentAlignment="Center"
+                      PasswordChanged="BadgePWB_PasswordChanged"/>
+                <TextBlock Text="{Binding FullName}" 
+                   Grid.Row="2"
+                   Margin="0,15"
+                   HorizontalAlignment="Center"
+                   TextAlignment="Center"/>
+            </Grid>
+            <custom:CustomButton
+                    x:Name="LoginButton"
+                    Margin="0,25"
+                    Height="35" 
+                    Width="250"
+                    ButtonContent="Login"
+                    ButtonCommand="{Binding LoginCommand}"
+                    ButtonForeground="White"
+                    ButtonBackground="Black">
+            </custom:CustomButton>
+            <custom:CustomButton
+                    x:Name="ResetButton"
+                    Margin="0,25"
+                    Height="35"
+                    Width="250"
+                    ButtonContent="Reset"
+                    ButtonCommand="{Binding ResetCommand}"
+                    ButtonForeground="White"
+                    ButtonBackground="Black">
+            </custom:CustomButton>
+        </StackPanel>
+    </Border>
 </Window>

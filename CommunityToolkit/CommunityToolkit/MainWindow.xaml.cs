@@ -14,6 +14,6 @@ public partial class MainWindow
 
     private void BadgePWB_PasswordChanged(object sender, System.Windows.RoutedEventArgs e)
     {
-        viewModel.Badge = BadgePWB.Password;
+        viewModel.Password = BadgePWB.Password;
     }
 }

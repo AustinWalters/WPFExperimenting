@@ -8,11 +8,10 @@
         mc:Ignorable="d"
         FontSize="24"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Border Width="Auto"
             Height="Auto"
-            Background="White"
-            CornerRadius="6">
+            >
         <Border.Effect>
             <DropShadowEffect BlurRadius="15"
                               Direction ="-90" 
@@ -21,7 +20,8 @@
                               Color ="Gray" />
         </Border.Effect>
         <StackPanel Orientation="Vertical"
-                    Margin="20">
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
             <TextBlock Text="Login" 
                        FontSize="25"
                        HorizontalAlignment="Center"
@@ -36,7 +36,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Please Enter Username" 
+                <TextBlock Text="Please Scan Badge" 
                    Grid.Row="0"
                    Margin="0,15"
                    HorizontalAlignment="Center"/>
@@ -55,24 +55,24 @@
                    TextAlignment="Center"/>
             </Grid>
             <custom:CustomButton
-                    x:Name="LoginButton"
-                    Margin="0,25"
-                    Height="35" 
-                    Width="250"
-                    ButtonContent="Login"
-                    ButtonCommand="{Binding LoginCommand}"
-                    ButtonForeground="White"
-                    ButtonBackground="Black">
+                x:Name="LoginButton"
+                Margin="0,25"
+                Height="35" 
+                Width="250"
+                ButtonContent="Login"
+                ButtonCommand="{Binding LoginCommand}"
+                ButtonForeground="Black"
+                ButtonBackground="#FFD400">
             </custom:CustomButton>
             <custom:CustomButton
-                    x:Name="ResetButton"
-                    Margin="0,25"
-                    Height="35"
-                    Width="250"
-                    ButtonContent="Reset"
-                    ButtonCommand="{Binding ResetCommand}"
-                    ButtonForeground="White"
-                    ButtonBackground="Black">
+                x:Name="ResetButton"
+                Margin="0,25"
+                Height="35"
+                Width="250"
+                ButtonContent="Reset"
+                ButtonCommand="{Binding ResetCommand}"
+                ButtonForeground="Black"
+                ButtonBackground="#FFD400">
             </custom:CustomButton>
         </StackPanel>
     </Border>

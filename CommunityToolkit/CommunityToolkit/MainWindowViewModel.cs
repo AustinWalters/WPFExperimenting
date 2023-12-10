@@ -6,12 +6,14 @@ namespace CommunityToolkit;
 
 public partial class MainWindowViewModel : ObservableObject
 {
+    private User? Employee;
+
     [ObservableProperty]
     private string? _fullName = string.Empty;
     [ObservableProperty]
-    private string? _badge = string.Empty;
-
-    private User? Employee;
+    private string? _password = string.Empty;
+    [ObservableProperty]
+    private string? _error = string.Empty;
 
     public MainWindowViewModel()
     {
@@ -21,7 +23,17 @@ public partial class MainWindowViewModel : ObservableObject
     [RelayCommand()]
     private void Login()
     {
-        Employee = new User(Badge);
+        if (Password == null || Password.Length == 0)
+        {
+            Error = "Please scan your badge";
+            return;
+        }
+        if (!Password.ToUpper().Contains("OP"))
+        {
+            Error = "Please scan a valid badge";
+            return;
+        }
+        Employee = new User(Password);
         Employee.SetName("John Doe");
         FullName = Employee.FullName;
     }
@@ -30,7 +42,7 @@ public partial class MainWindowViewModel : ObservableObject
     private void Reset()
     {
         FullName = string.Empty;
-        Badge = string.Empty;
+        Password = string.Empty;
         Employee = null;
     }
 

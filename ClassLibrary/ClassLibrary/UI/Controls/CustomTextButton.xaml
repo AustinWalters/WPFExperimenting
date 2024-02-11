@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="ClassLibrary.CustomButton"
+    x:Class="ClassLibrary.UI.Controls.CustomTextButton"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     x:Name="me">

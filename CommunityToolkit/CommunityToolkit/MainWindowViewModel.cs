@@ -46,4 +46,9 @@ public partial class MainWindowViewModel : ObservableObject
         Employee = null;
     }
 
+    [RelayCommand()]
+    private void Settings()
+    {
+        FullName = "Settings pressed";
+    }
 }

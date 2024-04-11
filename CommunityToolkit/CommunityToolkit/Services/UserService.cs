@@ -2,7 +2,7 @@
 
 namespace CommunityToolkit.Services;
 
-//TODO: Get way to get mock data into and from a local sqlite database
+//TODO: Get way to get mock data
 
 /// <summary>
 /// This class should be used to make changes to the backend for a particular user or for getting informationa about a user

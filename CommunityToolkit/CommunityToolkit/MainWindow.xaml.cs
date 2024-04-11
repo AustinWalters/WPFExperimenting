@@ -63,6 +63,10 @@ public partial class MainWindow
 
     private void BadgePWB_PasswordChanged(object sender, System.Windows.RoutedEventArgs e)
     {
+        if (BadgePWB.Password.Length < 5)
+        {
+            return;
+        }
         viewModel.Password = BadgePWB.Password;
     }
 }

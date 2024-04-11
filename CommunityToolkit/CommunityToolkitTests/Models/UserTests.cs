@@ -1,43 +1,40 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace CommunityToolkit.Models.Tests
 {
-    [TestClass()]
     public class UserTests
     {
-        [TestMethod()]
+        private readonly User _user;
+        [Fact]
         public void SetNameTest()
         {
-            User user = new User();
-            Assert.AreEqual(string.Empty, user.FullName);
-            user.SetName("Austin");
-            Assert.AreEqual("Austin", user.FullName);
+            Assert.Equal(string.Empty, _user.FullName);
+            _user.SetName("Austin");
+            Assert.Equal("Austin", _user.FullName);
         }
 
-        [TestMethod()]
+        [Fact]
         public void SetIdTest()
         {
-            User user = new User();
-            Assert.AreEqual(string.Empty, user.Id);
-            user.SetId("12345");
-            Assert.AreEqual("12345", user.Id);
+            Assert.Equal(string.Empty, _user.Id);
+            _user.SetId("12345");
+            Assert.Equal("12345", _user.Id);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DoesHavePermission()
         {
-            User user = new User();
-            Assert.IsFalse(user.HasPermission("1"));
-            user.GetPermissions();
-            Assert.IsTrue(user.HasPermission("1"));
+            Assert.False(_user.HasPermission("1"));
+            _user.GetPermissions();
+            Assert.True(_user.HasPermission("1"));
         }
-        [TestMethod()]
+
+        [Fact]
         public void DoesNotHavePermission()
         {
-            User user = new User();
-            Assert.IsFalse(user.HasPermission("1"));
-            user.GetPermissions();
-            Assert.IsFalse(user.HasPermission("4"));
+            Assert.False(_user.HasPermission("1"));
+            _user.GetPermissions();
+            Assert.False(_user.HasPermission("4"));
         }
     }
 }

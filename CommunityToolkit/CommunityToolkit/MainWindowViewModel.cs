@@ -23,6 +23,9 @@ public partial class MainWindowViewModel : ObservableObject
     [RelayCommand()]
     private void Login()
     {
+        Employee = new User(Password);
+        Employee.SetName("John Doe");
+        FullName = Employee.FullName;
         if (Password == null || Password.Length == 0)
         {
             Error = "Please scan your badge";
